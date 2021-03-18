@@ -131,7 +131,8 @@ const MediaCard = (props) => {
             style={{ display: "flex", alignItems: "center" }}
           >
             <TodayIcon color="inherit " display="inline" style={{marginRight: "0.5rem"}}/>
-            <span>Data de entrada: {props.created_at}</span>
+            <span>Data de entrada: {props.created_at.substring(0,10)}</span>
+            {console.log(props)}
           </Typography>
         </CardContent>
       </Collapse>
