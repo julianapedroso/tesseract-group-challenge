@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BASE_URL, MEMBERS_URL } from "../constants/parameters";
 import SimpleList from "../components/SimpleList";
-import { Search } from "../components/styles";
+import { Title, Search } from "./styles";
 
 const MembersPage = () => {
   const [membersList, setMembersList] = useState([]);
@@ -46,7 +46,7 @@ const MembersPage = () => {
         />
       </div>
 
-      <h2 align="center">Atuais Membros Tesseract:</h2>
+      <Title align="center">Atuais Membros Tesseract:</Title>
       {filterMembers().map((user) => {
         return (
           <div align="center">

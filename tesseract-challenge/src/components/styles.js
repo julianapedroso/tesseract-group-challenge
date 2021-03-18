@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { TextField } from "@material-ui/core";
 
 export const Wrapper = styled.header`
   background: #000;
@@ -13,14 +12,10 @@ export const Wrapper = styled.header`
   }
 `;
 
-export const Search = styled(TextField)`
-  width: 25vw;
-`;
-
 export const MediaLink = styled.a`
   text-decoration: none;
   color: #000;
-`
+`;
 
 export const ContainerFooter = styled.footer`
   background: #3c3d3c;

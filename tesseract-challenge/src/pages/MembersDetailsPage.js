@@ -27,7 +27,7 @@ const MembersDetailsPage = () => {
 
   return (
     <div>
-      <Title>Members Details Page</Title>
+      <Title>Detalhes dos Membros: </Title>
       {membersDetails ? (
         membersDetails.map((user) => {
           return (
