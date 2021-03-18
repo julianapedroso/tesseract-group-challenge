@@ -1,4 +1,5 @@
 #  📌 TESSERACT - CHALLENGE 🔳
+#### Desafio Grupo Tesseract - Processo seletivo para Desenvolvedor Front-End Júnior.
 
 <h4 align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/julianapedroso/tesseract"> <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/julianapedroso/tesseract"> 
