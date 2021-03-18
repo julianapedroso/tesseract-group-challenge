@@ -30,22 +30,21 @@ const SimpleList = (props) => {
           <Avatar src={props.avatar_url} alt="Tesseract Avatar" />
         </ListItemAvatar>
         <List>
-        <Link to={`/details/${props.login}`}>
-          <ListItemText
-            secondary={
-              <React.Fragment>
-                <Typography
-                  component="span"
-                  variant="body1"
-                  className={classes.inline}
-                  color="textPrimary"
-                >
-                  {props.login}
-                </Typography>
-                {" — I'll be in your neighborhood doing errands this…"}
-              </React.Fragment>
-            }
-          />
+          <Link to={`/details/${props.login}`}>
+            <ListItemText
+              secondary={
+                <React.Fragment>
+                  <Typography
+                    component="span"
+                    variant="body1"
+                    className={classes.inline}
+                    color="textPrimary"
+                  >
+                    {props.login}
+                  </Typography>
+                </React.Fragment>
+              }
+            />
           </Link>
         </List>
       </ListItem>
