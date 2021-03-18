@@ -3,14 +3,14 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Header from "../components/Header";
 import MembersPage from "../pages/MembersPage";
 import MembersDetailsPage from "../pages/MembersDetailsPage";
+import Footer from "../components/Footer";
 import ErrorPage from "../pages/ErrorPage";
 
 const Routers = () => {
   return (
     <BrowserRouter>
+      <Header />
       <Switch>
-        <Header />
-
         <Route exact path="/">
           <MembersPage />
         </Route>
@@ -23,6 +23,7 @@ const Routers = () => {
           <ErrorPage />
         </Route>
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 };

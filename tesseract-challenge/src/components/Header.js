@@ -1,11 +1,15 @@
 import React from "react";
+import { Wrapper } from "./styled";
+import Logo from "../assets/tesseract-white-logo.png";
 
 const Header = () => {
   return (
-    <div>
-      <h1>Header</h1>
-    </div>
+    <header>
+      <Wrapper>
+        <img src={Logo} alt="Tesseract Logo" />
+      </Wrapper>
+    </header>
   );
-}
+};
 
 export default Header;

@@ -1,11 +1,14 @@
 import React from "react";
+import { ContainerFooter } from "./styled";
 
 const Footer = () => {
   return (
     <div>
-      <h1>Footer</h1>
+      <ContainerFooter>
+        <p>Oi, eu sou um Footer</p>
+      </ContainerFooter>
     </div>
   );
-}
+};
 
 export default Footer;
