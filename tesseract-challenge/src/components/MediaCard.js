@@ -65,7 +65,7 @@ const MediaCard = (props) => {
         }
         action={<IconButton aria-label="settings"></IconButton>}
         title={props.name}
-      /> 
+      />
       <CardContent>
         <Typography
           variant="body2"
@@ -102,7 +102,8 @@ const MediaCard = (props) => {
         <CardContent>
           <Typography paragraph>Bio:</Typography>
           <Typography paragraph>"{props.bio}"</Typography>
-          <hr />
+          <hr style={{ marginBottom: "2rem" }} />
+
           <Typography
             variant="body2"
             paragraph
@@ -140,7 +141,7 @@ const MediaCard = (props) => {
               display="inline"
               style={{ marginRight: "0.5rem" }}
             />
-            <span>Data de entrada: {props.created_at.substring(0, 10)}</span>
+            Data de entrada: {props.created_at.substring(0, 10)}
             {console.log(props)}
           </Typography>
         </CardContent>
