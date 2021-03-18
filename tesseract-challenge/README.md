@@ -1,4 +1,4 @@
-#  TESSERACT - CHALLENGE <img src="https://avatars.githubusercontent.com/u/21321212?s=280&v=4" width="4%" alt="Tesseract Logo">
+#  📌 TESSERACT - CHALLENGE 🔳
 
 <h4 align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/julianapedroso/tesseract"> <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/julianapedroso/tesseract"> 
