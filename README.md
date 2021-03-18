@@ -21,7 +21,7 @@ http://tesseract-challenge.surge.sh/
     - [X] Quantidade de repositórios
     - [X] Quantidade de seguidores
     - [X] Data de entrada no Github
-        - 🌟 Plus:
+          🌟 Plus:
         - [X] Localização
         - [X] Bio
         - [X] Direcionamento para o perfil no Github
