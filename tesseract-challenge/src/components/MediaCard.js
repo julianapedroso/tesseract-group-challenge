@@ -56,14 +56,16 @@ const MediaCard = (props) => {
       <CardHeader
         avatar={
           <ListItemAvatar>
-            <Avatar src={props.avatar_url} alt="Tesseract Avatar" />
+            <Avatar
+              src={props.avatar_url}
+              alt="Tesseract Avatar"
+              style={{ marginRight: "3rem" }}
+            />
           </ListItemAvatar>
         }
         action={<IconButton aria-label="settings"></IconButton>}
-        title
-        variant="h4"
-        subheader={props.name}
-      />
+        title={props.name}
+      /> 
       <CardContent>
         <Typography
           variant="body2"
@@ -74,15 +76,15 @@ const MediaCard = (props) => {
       <CardActions disableSpacing>
         <IconButton>
           <MediaLink href={props.html_url} target="_blank">
-            <GitHubIcon color="inherit"/>
+            <GitHubIcon color="inherit" />
           </MediaLink>
-        </IconButton >
+        </IconButton>
         <IconButton>
           <MediaLink
             href={`https://twitter.com/${props.twitter_username}`}
             target="_blank"
           >
-            <TwitterIcon color="inherit"/>
+            <TwitterIcon color="inherit" />
           </MediaLink>
         </IconButton>
         <IconButton
@@ -106,7 +108,10 @@ const MediaCard = (props) => {
             paragraph
             style={{ display: "flex", alignItems: "center" }}
           >
-            <LocationOnIcon color="secondary" style={{marginRight: "0.5rem"}}/>
+            <LocationOnIcon
+              color="secondary"
+              style={{ marginRight: "0.5rem" }}
+            />
             {props.location}
           </Typography>
           <Typography
@@ -114,7 +119,7 @@ const MediaCard = (props) => {
             paragraph
             style={{ display: "flex", alignItems: "center" }}
           >
-            <FolderIcon color="inherit" style={{marginRight: "0.5rem"}}/>
+            <FolderIcon color="inherit" style={{ marginRight: "0.5rem" }} />
             Repositórios: {props.public_repos}
           </Typography>
           <Typography
@@ -122,7 +127,7 @@ const MediaCard = (props) => {
             paragraph
             style={{ display: "flex", alignItems: "center" }}
           >
-            <PeopleAltIcon color="inherit" style={{marginRight: "0.5rem"}}/>
+            <PeopleAltIcon color="inherit" style={{ marginRight: "0.5rem" }} />
             Seguidores: {props.followers}
           </Typography>
           <Typography
@@ -130,8 +135,12 @@ const MediaCard = (props) => {
             paragraph
             style={{ display: "flex", alignItems: "center" }}
           >
-            <TodayIcon color="inherit " display="inline" style={{marginRight: "0.5rem"}}/>
-            <span>Data de entrada: {props.created_at.substring(0,10)}</span>
+            <TodayIcon
+              color="inherit "
+              display="inline"
+              style={{ marginRight: "0.5rem" }}
+            />
+            <span>Data de entrada: {props.created_at.substring(0, 10)}</span>
             {console.log(props)}
           </Typography>
         </CardContent>

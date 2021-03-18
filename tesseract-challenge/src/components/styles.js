@@ -9,6 +9,13 @@ export const Wrapper = styled.header`
   img {
     margin: 0 auto;
     width: 20%;
+
+    @media (min-width: 500px) and (max-width: 800px) {
+      width: 40%;
+    }
+    @media (max-width: 499px) {
+      width: 60%;
+    }
   }
 `;
 

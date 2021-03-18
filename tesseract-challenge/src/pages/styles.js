@@ -9,4 +9,11 @@ export const Title = styled.h1`
 
 export const Search = styled(TextField)`
   width: 25vw;
+
+  @media (min-width: 500px) and (max-width: 800px) {
+      width: 40%;
+    }
+    @media (max-width: 499px) {
+      width: 70%;
+    }
 `;
