@@ -1,10 +1,12 @@
 import React from "react";
+import GIF from "../assets/error-page.gif"
+import { ErrorGIF } from "./styles"
 
 const ErrorPage = () => {
   return (
-    <div>
-      <h1>Error Page</h1>
-    </div>
+    <ErrorGIF>
+      <img src={GIF}/>
+    </ErrorGIF>
   );
 }
 
