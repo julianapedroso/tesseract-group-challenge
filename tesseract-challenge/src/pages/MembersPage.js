@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BASE_URL, MEMBERS } from "../constants/parameters";
 import SimpleList from "../components/SimpleList";
-import { Search } from "../components/styled";
+import { Search } from "../components/styles";
 
 const MembersPage = () => {
   const [membersList, setMembersList] = useState([]);
@@ -16,7 +16,6 @@ const MembersPage = () => {
     axios
       .get("https://api.github.com/orgs/grupotesseract/public_members")
       .then((res) => {
-        console.log(res.data);
         setMembersList(res.data);
       })
       .catch((err) => {
@@ -29,8 +28,8 @@ const MembersPage = () => {
   };
 
   const filterMembers = () => {
-    return membersList.filter((member) => {
-      const login = member.login.toLowerCase();
+    return membersList.filter((user) => {
+      const login = user.login.toLowerCase();
       return login.indexOf(inputLogin.toLowerCase()) > -1;
     });
   };
@@ -48,13 +47,13 @@ const MembersPage = () => {
       </div>
 
       <h2 align="center">Membros:</h2>
-      {filterMembers().map((member) => {
+      {filterMembers().map((user) => {
         return (
           <div align="center">
           <SimpleList
-            key={member.id}
-            avatar_url={member.avatar_url}
-            login={member.login}
+            key={user.id}
+            avatar_url={user.avatar_url}
+            login={user.login}
           ></SimpleList>
           </div>
         );

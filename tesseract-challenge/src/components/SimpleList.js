@@ -7,6 +7,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,12 +24,13 @@ const SimpleList = (props) => {
   const classes = useStyles();
 
   return (
-    <List className={classes.root}>
+    <List className={classes.root} key={props.id}>
       <ListItem alignItems="center">
         <ListItemAvatar>
-          <Avatar src={props.avatar_url} alt="Tesseract Logo" />
+          <Avatar src={props.avatar_url} alt="Tesseract Avatar" />
         </ListItemAvatar>
         <List>
+        <Link to={`/details/${props.login}`}>
           <ListItemText
             secondary={
               <React.Fragment>
@@ -44,6 +46,7 @@ const SimpleList = (props) => {
               </React.Fragment>
             }
           />
+          </Link>
         </List>
       </ListItem>
       <Divider variant="inset" component="li" />

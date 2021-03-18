@@ -15,7 +15,7 @@ const Routers = () => {
           <MembersPage />
         </Route>
 
-        <Route exact path="/details/:userId">
+        <Route exact path="/details/:login">
           <MembersDetailsPage />
         </Route>
 

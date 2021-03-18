@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper } from "./styled";
+import { Wrapper } from "./styles";
 import Logo from "../assets/tesseract-white-logo.png";
 
 const Header = () => {
