@@ -17,7 +17,7 @@ const MembersDetailsPage = () => {
       .get(`https://api.github.com/users/${params.login}`)
       .then((res) => {
         console.log(res.data);
-        // setMembersDetails(res.data);
+        setMembersDetails([res.data]);
       })
       .catch((err) => {
         console.error(err);
@@ -36,6 +36,10 @@ const MembersDetailsPage = () => {
           public_repos={user.public_repos}
           followers={user.followers}
           created_at={user.created_at}
+          bio={user.bio}
+          location={user.location}
+          html_url={user.html_url}
+          twitter_username={user.twitter_username}
 
           >
           </MediaCard>;
