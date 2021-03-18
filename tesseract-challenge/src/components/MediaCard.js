@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
@@ -11,14 +10,15 @@ import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import { red } from "@material-ui/core/colors";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import ShareIcon from "@material-ui/icons/Share";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
-import { Divider, ListItemAvatar } from "@material-ui/core";
-import { MediaLink } from "./styles"
+import LocationOnIcon from "@material-ui/icons/LocationOn";
+import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
+import FolderIcon from "@material-ui/icons/Folder";
+import TodayIcon from "@material-ui/icons/Today";
+import { ListItemAvatar } from "@material-ui/core";
+import { MediaLink } from "./styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,26 +52,17 @@ const MediaCard = (props) => {
   };
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} style={{ width: "300vw" }} key={props.id}>
       <CardHeader
         avatar={
           <ListItemAvatar>
             <Avatar src={props.avatar_url} alt="Tesseract Avatar" />
           </ListItemAvatar>
         }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
+        action={<IconButton aria-label="settings"></IconButton>}
         title
-        variant="h5"
+        variant="h4"
         subheader={props.name}
-      />
-      <CardMedia
-        className={classes.media}
-        image={props.avatar_url}
-        title="Paella dish"
       />
       <CardContent>
         <Typography
@@ -83,12 +74,15 @@ const MediaCard = (props) => {
       <CardActions disableSpacing>
         <IconButton>
           <MediaLink href={props.html_url} target="_blank">
-            <GitHubIcon />
+            <GitHubIcon color="inherit"/>
           </MediaLink>
-        </IconButton>
+        </IconButton >
         <IconButton>
-          <MediaLink href={`https://twitter.com/${props.twitter_username}`} target="_blank">
-            <TwitterIcon />
+          <MediaLink
+            href={`https://twitter.com/${props.twitter_username}`}
+            target="_blank"
+          >
+            <TwitterIcon color="inherit"/>
           </MediaLink>
         </IconButton>
         <IconButton
@@ -105,11 +99,40 @@ const MediaCard = (props) => {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>Bio:</Typography>
-          <Typography paragraph>{props.bio}</Typography>
-          <Typography paragraph>{props.location}</Typography>
-          <Typography paragraph>Repositórios: {props.public_repos}</Typography>
-          <Typography paragraph>Seguidores: {props.followers}</Typography>
-          <Typography paragraph>Data de entrada: {props.created_at}</Typography>
+          <Typography paragraph>"{props.bio}"</Typography>
+          <hr />
+          <Typography
+            variant="body2"
+            paragraph
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <LocationOnIcon color="secondary" style={{marginRight: "0.5rem"}}/>
+            {props.location}
+          </Typography>
+          <Typography
+            variant="body2"
+            paragraph
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <FolderIcon color="inherit" style={{marginRight: "0.5rem"}}/>
+            Repositórios: {props.public_repos}
+          </Typography>
+          <Typography
+            variant="body2"
+            paragraph
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <PeopleAltIcon color="inherit" style={{marginRight: "0.5rem"}}/>
+            Seguidores: {props.followers}
+          </Typography>
+          <Typography
+            variant="body2"
+            paragraph
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <TodayIcon color="inherit " display="inline" style={{marginRight: "0.5rem"}}/>
+            <span>Data de entrada: {props.created_at}</span>
+          </Typography>
         </CardContent>
       </Collapse>
     </Card>

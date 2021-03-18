@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { BASE_URL, MEMBERS } from "../constants/parameters";
+import { BASE_URL, MEMBERS_URL } from "../constants/parameters";
 import SimpleList from "../components/SimpleList";
 import { Search } from "../components/styles";
 
@@ -14,7 +14,7 @@ const MembersPage = () => {
 
   const getMembersInformation = () => {
     axios
-      .get("https://api.github.com/orgs/grupotesseract/public_members")
+      .get(`${BASE_URL}/${MEMBERS_URL}`)
       .then((res) => {
         setMembersList(res.data);
       })
@@ -46,15 +46,15 @@ const MembersPage = () => {
         />
       </div>
 
-      <h2 align="center">Membros:</h2>
+      <h2 align="center">Atuais Membros Tesseract:</h2>
       {filterMembers().map((user) => {
         return (
           <div align="center">
-          <SimpleList
-            key={user.id}
-            avatar_url={user.avatar_url}
-            login={user.login}
-          ></SimpleList>
+            <SimpleList
+              key={user.id}
+              avatar_url={user.avatar_url}
+              login={user.login}
+            ></SimpleList>
           </div>
         );
       })}

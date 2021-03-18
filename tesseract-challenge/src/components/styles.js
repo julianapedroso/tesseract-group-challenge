@@ -19,7 +19,7 @@ export const Search = styled(TextField)`
 
 export const MediaLink = styled.a`
   text-decoration: none;
-  color: inherit;
+  color: #000;
 `
 
 export const ContainerFooter = styled.footer`
