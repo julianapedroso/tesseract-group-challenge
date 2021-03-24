@@ -39,7 +39,7 @@ As seguintes tecnologias foram usadas na construção do projeto:
 - Material-UI
 - Styled-componentes
 
-# 📂 Como instalar o projeto:
+### 📂 Como instalar o projeto:
 
 ##### Passo 1. Clone este repositório:
 ```
